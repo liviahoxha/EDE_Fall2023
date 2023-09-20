@@ -100,7 +100,10 @@ check_passing_score <- function(score) {
 # I specify the test scores created in the above question 
 test_scores <- c(75, 62, 90, 42)
 
-# Here I apply the function to each test score in the vector
+# this didn't work so I will try something else below and put the comment before
+# check_passing_score(test_scores) # this didn't work so I will try something else below
+
+# Here I apply the function to each test score in the vector and it worked
 cat("Passing Grades:\n")
 for (score in test_scores) {
   cat("Score:", score, "Passing:", check_passing_score(score), "\n")
@@ -123,5 +126,5 @@ check_and_print_passing_score_ifelse(test_scores)
 
 12. QUESTION: Which option of `if` and `else` vs. `ifelse` worked? Why?
 
-> Answer: I tried both `if` and `else` and `ifelse`options. The `if` and `else` statement worked because the aim of this question was to check each test score individually and see whether it's passing or not passing, as we are dealing with individual elements.`ifelse` on the other hand is used for vectorized operations where a condition to each element of a vector is applied and a new vector of results. It's not the right choice for this specific task of checking individual test scores and printing the results.
-Disclaimer: I used the help of online sources and tools to guide me through this assignment. 
+> Answer: I tried both `if` and `else` and `ifelse`options and they both worked.
+Disclaimer: I used the help of online sources and tools to guide me through some of the aspects of this assignment. 
