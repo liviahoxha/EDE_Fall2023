@@ -92,15 +92,15 @@ summary_Ozone <- epa_data %>%
   arrange(mean_Ozone)
 
 #Use the `kable` function to produce the 2 tables in markdown format
-#First i create a variable that has the names of my columns 
+#Create a variable that has the names of the columns 
 my_col.names <- c('County','$\\mu g/m^3$')
 
-#Here i create the PM2.5 table, name the columns and put the title
+#Now I create the PM2.5 table, then name the columns and put the title
 knitr::kable(summary_PM25, 
     col.names = my_col.names, 
     caption = 'Mean Particulates (2.5mm)')
 
-#Here i create the Ozone table,, name the columns and add the title
+#Create the Ozone table,then name the columns and add the title
 knitr::kable(summary_Ozone, 
   col.names = my_col.names, 
   caption = 'Mean Ozone')
@@ -118,7 +118,7 @@ Create two separate code chunks that create boxplots of the distribution of Ozon
 
 
 ```{r, echo=FALSE, warning=FALSE, fig.cap="Monthly Ozone (2018)"}
-# Filter the data for records collected in 2018
+# Here I filter the data for records collected in 2018
 ozone_2018 <- epa_data %>% 
   filter(year(Date) == 2018)
 
@@ -137,7 +137,7 @@ ggplot(ozone_2018, aes(x = factor(Month), y = Ozone)) +
 
 
 ```{r, echo=FALSE, warning=FALSE, fig.cap="Monthly Ozone (2019)"}
-# Filter the data for records collected in 2019
+# Now I filter the data for records collected in 2019
 ozone_2019 <- epa_data %>% 
   filter(year(Date) == 2019)
 
